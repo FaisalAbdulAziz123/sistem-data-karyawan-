@@ -1,0 +1,261 @@
+/* ========================================= */
+/* STYLING KHUSUS UI PORTAL KARYAWAN         */
+/* Sesuai Referensi Gambar (ID Card & Tugas) */
+/* ========================================= */
+
+.portal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Kartu Biru (ID Card) */
+.blue-id-card {
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    border-radius: 16px;
+    padding: 32px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek gelombang abstrak di dalam kartu biru */
+.blue-id-card::after {
+    content: '';
+    position: absolute;
+    top: -50%; right: -10%;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.blue-id-left { position: relative; z-index: 2; }
+.blue-status-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 16px;
+    backdrop-filter: blur(4px);
+}
+.blue-id-left h2 {
+    font-size: 1.8rem;
+    margin: 0 0 4px 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+.blue-id-left p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.blue-id-right { text-align: right; position: relative; z-index: 2; }
+.nip-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.nip-value {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* Grid Kotak Info (Bawah Kartu Biru) */
+.info-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.info-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.info-icon {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.info-icon svg { width: 22px; height: 22px; }
+.info-text-area { flex: 1; }
+.info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6b7280;
+    margin: 0 0 4px 0;
+}
+.info-val {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px 0;
+}
+.info-sub {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* Section Informasi Sistem / Tugas */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f3f4f6;
+}
+.section-icon {
+    background: #3b82f6;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-icon svg { width: 18px; height: 18px; }
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #111827;
+    margin: 0;
+}
+
+/* List Tugas Styling */
+.task-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+.task-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border-color: #d1d5db;
+}
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #f3f4f6;
+    padding-bottom: 12px;
+}
+.task-title { font-size: 1.15rem; font-weight: 700; color: #111827; margin-bottom: 4px;}
+.task-date { font-size: 0.8rem; color: #6b7280; }
+.task-desc { font-size: 0.95rem; color: #4b5563; line-height: 1.6; white-space: pre-wrap; margin-bottom: 20px;}
+
+/* Box Form Update & Upload Tugas */
+.task-action-box {
+    background: #f9fafb;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #f3f4f6;
+}
+.task-upload-area {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #d1d5db;
+}
+.uploaded-file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    background: #eff6ff;
+    border-radius: 6px;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+.uploaded-file-info a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+.uploaded-file-info a:hover { text-decoration: underline; }
+.upload-input-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.upload-input-group input[type="file"] {
+    font-size: 0.85rem;
+    width: 100%;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #4b5563;
+}
+
+.status-updater {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.status-updater select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+    background: white;
+    min-width: 150px;
+}
+.status-updater button {
+    padding: 8px 20px;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.status-updater button:hover { background: #4338ca; }
+
+.badge-selesai { background-color: rgba(16, 185, 129, 0.12) !important; color: #047857 !important; }
+.badge-proses { background-color: rgba(245, 158, 11, 0.14) !important; color: #b45309 !important; }
+.badge-belumselesai { background-color: rgba(239, 68, 68, 0.12) !important; color: #b91c1c !important; }
+
+@media (max-width: 768px) {
+    .blue-id-card { flex-direction: column; align-items: flex-start; gap: 24px; padding: 24px; }
+    .blue-id-right { text-align: left; }
+    .info-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+    .status-updater { flex-direction: column; align-items: stretch; }
+}
